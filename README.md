@@ -26,7 +26,7 @@ docker build -t portscanner .
 Run the Docker container with a mounted volume for the wordlist:
 
 ```bash
-docker run -it --rm portscanner -H 127.0.0.1
+docker run -it --rm portscanner -H <host> [options]
 ```
 
 ## Options
@@ -47,6 +47,10 @@ Scan all available ports:
 
 ```bash
 python scanner.py -H 127.0.0.1 -a
+```
+Scan a specific range of ports using docker:
+```bash
+docker run -it --rm portscanner -H 127.0.0.1 -s 80 -e 100
 ```
 
 ## Implementation
