@@ -36,7 +36,7 @@ docker run -it --rm portscanner -H 127.0.0.1
 - `-e`, `--end`: Specify the end port (default is 1024).
 - `-a`, `--all`: Scan all available ports (from 1 to 65535).
 
-Example
+## Examples
 
 Scan a specific range of ports:
 
@@ -49,6 +49,6 @@ Scan all available ports:
 python scanner.py -H 127.0.0.1 -a
 ```
 
-Implementation
+## Implementation
 
 The script uses the concurrent.futures module for multithreaded port scanning, and it handles KeyboardInterrupt (Ctrl+C) to ensure a graceful exit.
